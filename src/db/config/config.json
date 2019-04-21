@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": null,
+    "database": "browsByChia-dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+     "logging": false,
+     "operatorsAliases": false
+  },
+  "test": {
+    "username": "postgres",
+    "password": null,
+    "database": "browsByChia-test",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+     "logging": false,
+     "operatorsAliases": false
+  },
+  "production": {
+    "username": "postgres",
+    "password": null,
+    "database": "browsbychia",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "logging": false,
+    "operatorsAliases": false
+  }
+}
