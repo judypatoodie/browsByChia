@@ -11,6 +11,12 @@ html,body
   padding-left: 40px;
 }
 
+.banner{
+  height:100%;
+width:100%;
+overflow:hidden; 
+}
+
 .landingbanner{
   display:block;
   margin:auto;
