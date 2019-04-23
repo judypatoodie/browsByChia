@@ -3,6 +3,12 @@ body
     overflow-x: hidden;
 }
 
+.top-nav-bar{
+  height: 50px;
+  width: 100vw;
+  font-size: 20px;
+}
+
 .nav-item{
   padding-left: 40px;
 }
