@@ -44,7 +44,6 @@ body
   background-image: url('/images/pinkWatercolor.png');
   background-blend-mode: lighten;
   height: 800px;
-  width: 100%;
   background-size: cover;
   position: relative;
   z-index: -2;
@@ -58,7 +57,7 @@ body
   padding-left: 30px;
   font-family: valsdayscript;
   font-size: 100px;
-  width: 100%;
+
 }
 
 #servicesRectangle{
