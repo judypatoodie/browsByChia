@@ -10,15 +10,18 @@ body
 }
 
 .banner{
-
   overflow:hidden;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 .landingbanner{
   display:block;
-  margin:auto;
-  padding-top: 150px;
-  margin-bottom: 150px;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom:100px;
+
+
   width: 100vw;
   height: 100vh;
   max-width: 700px;
