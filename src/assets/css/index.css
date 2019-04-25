@@ -61,7 +61,16 @@ body
   padding-left: 30px;
   font-family: valsdayscript;
   font-size: 100px;
+}
 
+.aboutDetails{
+  border-style: solid;
+  border-width: 1px;
+  border-color: darkgray;
+  height: 300px;
+  width: 80vw;
+  margin: auto;
+  margin-top: 30px;
 }
 
 #servicesRectangle{
@@ -111,6 +120,7 @@ body
 
 .browImage{
   overflow:hidden;
+  margin-top: 50px;
 }
 
 
