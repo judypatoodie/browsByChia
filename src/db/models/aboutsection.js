@@ -8,6 +8,10 @@ module.exports = (sequelize, DataTypes) => {
   description: {
     type: DataTypes.STRING,
     allowNull: false
+  },
+  sectionType: {
+    type: DataTypes.STRING,
+    allowNull: false
   }
   }, {});
   AboutSection.associate = function(models) {
