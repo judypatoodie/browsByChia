@@ -20,9 +20,9 @@ module.exports = {
        };
        aboutQueries.addAbout(newAbout, (err, about) => {
          if(err){
-           res.redirect(500, "/about/new");
+           res.redirect(500, "/");
          } else {
-           res.redirect(303, `/about/${about.id}`);
+           res.redirect(303, `/`);
          }
        });
      },

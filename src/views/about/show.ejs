@@ -59,7 +59,9 @@
 
                   <p><%= about.description %></p>
                 </div>
+                <% if(currentUser) { %>
                 <a href="/about/<%= about.id %>/edit" class="btn btn-warning">Edit</a>
+                <% } %>
         </div>
 
 

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=.5 ">
+    <% include ../static/partials/head.ejs %>
 
 
     <title>Brows by Chia</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/index.css">
+
   </head>
   <body>
 
@@ -24,7 +22,7 @@
           <img class="landingbanner" src="/images/chiaBrowLogo.png">
         </div>
 
-
+<div class="aboutDiv">
         <div class="aboutSection" id="aboutSection">
                   <a class="aboutAnchor" id="aboutAnchor"></a>
           <span id="aboutTitle">
@@ -32,13 +30,20 @@
           </span>
                 <div id="aboutRectangle"></div>
                 <div class="aboutDetails">
-                  Content .....
+                  <% about.forEach((aboutSections) => { %>
+
+                        <li class="list-group-item">
+                          <a href="/about/<%= aboutSections.id %>"> <%= aboutSections.title %> </a>
+                        </li>
+                      <% }) %>
+
                 </div>
 
-
-
         </div>
-
+        <% if(currentUser) { %>
+           <a href="/about/new" class="btn btn-success">New About Details</a>
+         <% } %>
+</div>
 
         <div class="servicesSection ">
           <span id="servicesTitle">
