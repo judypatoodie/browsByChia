@@ -6,7 +6,7 @@ module.exports = {
             if(err){
               res.redirect(500, "static/index");
             } else {
-              res.render("static/index", {about});
+              res.render("about/index", {about});
             }
           })
   },
@@ -29,7 +29,7 @@ module.exports = {
   show(req, res, next){
 
       aboutQueries.getAbout(req.params.id, (err, about) => {
-        if(err || toaboutpic == null){
+        if(err || about == null){
           res.redirect(404, "/");
         } else {
           res.render("about/show", {about});
@@ -52,7 +52,7 @@ module.exports = {
         if(err || about == null){
           res.redirect(404, `/about/${req.params.id}/edit`);
         } else {
-          res.redirect(`/about/${about.id}`);
+          res.redirect(`/about/${req.params.id}`);
         }
       });
     }
