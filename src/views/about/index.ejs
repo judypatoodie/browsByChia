@@ -38,7 +38,7 @@
             </div>
         </div>
         <% if(currentUser) { %>
-           <!--<a href="/about/new" class="btn btn-success">New Section Details</a> -->
+           <a href="/about/new" class="btn btn-success">New Section Details</a>
            <span class="editlink">
            <a href="/about/5/edit" class="btn btn-warning">Edit About Details</a>
           </span>
@@ -59,13 +59,14 @@
                   <% if(about.sectionType === 'services'){ %>
                   <h1><%- about.title %></h1>
                     <%- about.description %>
+                    <% if(currentUser) { %>
+                       <span class="editServiceslink">
+                       <a href="/about/<%= about.id %>/edit" class="btn btn-warning">Edit Services Details</a>
+                      </span>
+                     <% } %>
                   <% } %>
                 <% }) %>
-                <% if(currentUser) { %>
-                   <span class="editServiceslink">
-                   <a href="/about/6/edit" class="btn btn-warning">Edit Services Details</a>
-                  </span>
-                 <% } %>
+
               </div>
             </div>
           </div>
@@ -80,13 +81,14 @@
                 <% if(about.sectionType === 'appointments'){ %>
                 <h1><%- about.title %></h1>
                   <%- about.description %>
+                  <% if(currentUser) { %>
+                     <span class="editApptlink">
+                     <a href="/about/<%= about.id %>/edit" class="btn btn-warning">Edit Appointment Details</a>
+                   </span>
+                   <% } %>
                 <% } %>
               <% }) %>
-              <% if(currentUser) { %>
-                 <span class="editApptlink">
-                 <a href="/about/7/edit" class="btn btn-warning">Edit Appointment Details</a>
-               </span>
-               <% } %>
+
             </div>
 
             <div class="col-sm border">
