@@ -11,10 +11,10 @@
 
       <ul class="list-group">
 
-        <% aboutSections.forEach((about) => { %>
+        <% about.forEach((about) => { %>
 
           <li class="list-group-item">
-            <a href="/topics/<%= about.id %>"> <%= about.title %> </a>
+            <a href="/about/<%= about.id %>"> <%= about.title %> </a>
           </li>
         <% }) %>
       </ul>
