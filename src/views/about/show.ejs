@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=.5 ">
+
+
+    <title>Brows by Chia</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top top-nav-bar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">@browsbychia</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#homeSection">HOME
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#aboutSection">ABOUT
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SERVICES
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+<main class="contiainer">
+  <div>
+        <div class="row text-center banner" id="homeSection">
+          <img class="landingbanner" src="/images/chiaBrowLogo.png">
+        </div>
+
+
+        <div class="aboutSection" id="aboutSection">
+                  <a class="aboutAnchor" id="aboutAnchor"></a>
+          <span id="aboutTitle">
+            About
+          </span>
+                <div id="aboutRectangle"></div>
+                <div class="aboutDetails">
+                  <h1><%= about.title %></h1>
+
+                  <p><%= about.description %></p>
+                </div>
+                <% if(currentUser) { %>
+                <a href="/about/<%= about.id %>/edit" class="btn btn-warning">Edit</a>
+                <% } %>
+        </div>
+
+
+        <div class="servicesSection ">
+          <span id="servicesTitle">
+            Services
+          </span>
+          <div id="servicesRectangle"></div>
+            <div class="row">
+              <div id="browImageContainer" class=" col-sm">
+                <img class="browImage img-fluid" src="/images/powderBrowSample.png">
+              </div>
+              <div class="col-sm border">
+                content
+              </div>
+            </div>
+          </div>
+
+        <div class="apptSection container-fluid">
+          <span id="apptTitle">
+            Appointments
+          </span>
+          <div class="row">
+            <div class="col-sm">content</div>
+            <div class="col-sm border">
+              <!-- Calendly inline widget begin -->
+              <div class="calendly-inline-widget" data-url="https://calendly.com/browsbychia" style="min-width:320px;height:580px;"></div>
+              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+              <!-- Calendly inline widget end -->
+            </div>
+            </div>
+          </div>
+  </div>
+</main>
+
+
+
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+      </script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+</html>

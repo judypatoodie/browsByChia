@@ -1,6 +1,7 @@
 body
 {
     overflow-x: hidden;
+      padding-top: 54px;
 }
 
 @-ms-viewport{
@@ -44,6 +45,10 @@ body
     margin-top: -100px;
     z-index: -1;
     position: absolute;
+}
+
+.aboutDiv{
+  
 }
 
 .aboutSection{
