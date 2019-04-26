@@ -1,6 +1,7 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
+
     return queryInterface.createTable('AboutSections', {
       id: {
         allowNull: false,
@@ -23,6 +24,10 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      sectionType: {
+      type: Sequelize.STRING,
+      allowNull: false
       }
     });
   },

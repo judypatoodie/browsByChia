@@ -9,11 +9,11 @@
     <main class="container">
 
 
-      <h1>New About Details</h1>
+      <h1>New Section Details</h1>
 
       <form action="/about/create" method="post">
         <div class="form-group">
-          <label for="title">About title</label>
+          <label for="title">Section Title</label>
           <input type="text" class="form-control" name="title" aria-describedby="titleHelp" placeholder="Enter Title">
             <small class="text-muted" id="titleHelp">title must be 2 or more characters in length.</small>
         </div>
@@ -22,9 +22,17 @@
           <textarea rows="4" class="form-control" name="description" placeholder="Enter Description"></textarea>
           <small class="text-muted" id="bodyHelp">body must be 10 or more characters in length.</small>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+        <div class="form-group">
+          <label for="sectionType">Section Type</label>
+            <select class="form-control" name="sectionType">
+              <option value='about'>About</option>
+              <option value='services'>Services</option>
+              <option value='appointments'>Appointments</option>
+            </select>
+          </div>
 
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </main>
 
     <% include ../static/partials/baseScripts.ejs %>

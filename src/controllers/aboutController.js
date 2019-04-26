@@ -1,4 +1,5 @@
 const aboutQueries = require("../db/queries.about.js");
+const markdown = require( "markdown" ).markdown;
 
 module.exports = {
   index(req, res, next){
@@ -16,7 +17,8 @@ module.exports = {
   create(req, res, next){
        let newAbout = {
          title: req.body.title,
-         description: req.body.description
+         description: req.body.description,
+         sectionType: req.body.sectionType
        };
        aboutQueries.addAbout(newAbout, (err, about) => {
          if(err){
@@ -52,7 +54,7 @@ module.exports = {
         if(err || about == null){
           res.redirect(404, `/about/${req.params.id}/edit`);
         } else {
-          res.redirect(`/about/${req.params.id}`);
+          res.redirect(`/`);
         }
       });
     }

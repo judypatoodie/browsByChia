@@ -47,14 +47,21 @@ body
     position: absolute;
 }
 
-.aboutDiv{
-  
+.editApptlink{
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
+.editServiceslink{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+}
 .aboutSection{
   background-image: url('/images/pinkWatercolor.png');
   background-position: center top;
-  background-blend-mode: lighten;
   height: 600px;
   background-size: cover;
   position: relative;
@@ -130,8 +137,9 @@ body
 
 
 #browImageContainer{
-
+  padding-left:60px;
   margin-top: 30px;
+
   overflow-x:hidden;
 
 }

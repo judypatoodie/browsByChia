@@ -27,7 +27,8 @@ module.exports = {
   addAbout(newAbout, callback){
       return AboutSection.create({
         title: newAbout.title,
-        description: newAbout.description
+        description: newAbout.description,
+        sectionType: newAbout.sectionType
       })
       .then((about) => {
         callback(null, about);

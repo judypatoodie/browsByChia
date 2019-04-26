@@ -1,24 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <% include ../static/partials/head.ejs %>
+
+
+    <title>Brows by Chia</title>
+
   </head>
   <body>
-    <main class="container">
-      <% include ../static/partials/navbar.ejs %>
 
-      <h1>Topics</h1>
+      <!-- Navigation -->
+    <% include ../static/partials/navbar.ejs %>
 
-      <ul class="list-group">
 
-        <% about.forEach((about) => { %>
 
-          <li class="list-group-item">
-            <a href="/about/<%= about.id %>"> <%= about.title %> </a>
-          </li>
-        <% }) %>
-      </ul>
+<main>
 
-    </main>
-  </body>
+  <div>
+        <div class="row text-center banner" id="homeSection">
+          <img class="landingbanner" src="/images/chiaBrowLogo.png">
+        </div>
+
+        <div class="aboutDiv">
+          <div class="aboutSection" id="aboutSection">
+            <a class="aboutAnchor" id="aboutAnchor"></a>
+            <span id="aboutTitle">
+              About
+            </span>
+            <div id="aboutRectangle"></div>
+            <div class="aboutDetails">
+              <% about.forEach((about) => { %>
+                <% if(about.sectionType === 'about'){ %>
+                <h1><%= about.title %></h1>
+                <%- about.description %>
+                <% } %>
+              <% }) %>
+            </div>
+        </div>
+        <% if(currentUser) { %>
+           <!--<a href="/about/new" class="btn btn-success">New Section Details</a> -->
+           <span class="editlink">
+           <a href="/about/5/edit" class="btn btn-warning">Edit About Details</a>
+          </span>
+         <% } %>
+       </div>
+
+        <div class="servicesSection ">
+          <span id="servicesTitle">
+            Services
+          </span>
+          <div id="servicesRectangle"></div>
+            <div class="row">
+              <div id="browImageContainer" class=" col-sm">
+                <img class="browImage img-fluid" src="/images/powderBrowSample.png">
+              </div>
+              <div class="col-sm border servicesDetails">
+                <% about.forEach((about) => { %>
+                  <% if(about.sectionType === 'services'){ %>
+                  <h1><%- about.title %></h1>
+                    <%- about.description %>
+                  <% } %>
+                <% }) %>
+                <% if(currentUser) { %>
+                   <span class="editServiceslink">
+                   <a href="/about/6/edit" class="btn btn-warning">Edit Services Details</a>
+                  </span>
+                 <% } %>
+              </div>
+            </div>
+          </div>
+
+        <div class="apptSection container-fluid">
+          <span id="apptTitle">
+            Appointments
+          </span>
+          <div class="row">
+            <div class="col-sm">
+              <% about.forEach((about) => { %>
+                <% if(about.sectionType === 'appointments'){ %>
+                <h1><%- about.title %></h1>
+                  <%- about.description %>
+                <% } %>
+              <% }) %>
+              <% if(currentUser) { %>
+                 <span class="editApptlink">
+                 <a href="/about/7/edit" class="btn btn-warning">Edit Appointment Details</a>
+               </span>
+               <% } %>
+            </div>
+
+            <div class="col-sm border">
+              <!-- Calendly inline widget begin -->
+              <div class="calendly-inline-widget" data-url="https://calendly.com/browsbychia" style="min-width:320px;height:580px;"></div>
+              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+              <!-- Calendly inline widget end -->
+            </div>
+            </div>
+
+          </div>
+  </div>
+</main>
+
+
+
+<% include ../static/partials/baseScripts.ejs %>
+
+    </body>
 </html>
