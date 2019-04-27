@@ -33,16 +33,18 @@
                 <% if(about.sectionType === 'about'){ %>
                 <h1><%= about.title %></h1>
                 <%- about.description %>
+                <% if(currentUser) { %>
+                  <% if(currentUser.email === 'juddyhuynh@gmail.com') { %>
+                   <a href="/about/new" class="btn btn-success">New Section Details</a>
+                   <% } %>
+                   <span class="editAboutlink">
+                   <a href="/about/<%= about.id %>/edit" class="btn btn-warning">Edit About Details</a>
+                  </span>
+                 <% } %>
                 <% } %>
               <% }) %>
             </div>
         </div>
-        <% if(currentUser) { %>
-           <a href="/about/new" class="btn btn-success">New Section Details</a>
-           <span class="editlink">
-           <a href="/about/5/edit" class="btn btn-warning">Edit About Details</a>
-          </span>
-         <% } %>
        </div>
 
         <div class="servicesSection ">
@@ -105,7 +107,7 @@
 
 
 
-<% include ../static/partials/baseScripts.ejs %>
+<% include ../static/partials/baseScripts.ejs %>\<q cite=""></q>
 
     </body>
 </html>
