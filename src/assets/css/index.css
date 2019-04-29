@@ -46,16 +46,15 @@ body
 }
 
 .editApptlink{
-  position: absolute;
-  right: 0;
-  bottom: 0;
 
+  left: 0;
+  bottom: 0;
+  padding-top: 90px;
 }
 
 .editServiceslink{
-  position: absolute;
-  right: 0;
-  top: 0;
+  left: 0;
+  bottom:0;
 }
 
 .editAboutlink{
@@ -112,11 +111,16 @@ body
 
 .servicesSection{
   height: 600px;
+  margin: auto;
+  height: 100%;
 }
 
 .apptSection{
   height: 800px;
   background-color: #5f5f5f;
+  height: 100%;
+  position: relative;
+
 }
 
 #apptTitle{
@@ -124,8 +128,24 @@ body
   font-family: valsdayscript;
   font-size: 100px;
   color: white;
+
+
 }
 
+.apptDetails{
+  margin-left: 30px;
+  margin-right: auto;
+  color: white;
+}
+#apptRectangle{
+  width:190px;
+  height:5px;
+  background: #fff;
+  position:absolute;
+  margin-top: 100px;
+  margin-left: -190px;
+
+}
 
 .calendly-inline-widget{
   padding-left: 10px;
@@ -134,17 +154,19 @@ body
   padding-bottom: 20px;
 }
 
+.calendly{
+  margin: 30px;
+
+}
 
 .browImage{
   overflow:hidden;
-  margin-top: 50px;
+  padding: 40px;
 }
 
 
 #browImageContainer{
-  padding-left:60px;
-  margin-top: 30px;
-
+  margin: auto;
   overflow-x:hidden;
 
 }
