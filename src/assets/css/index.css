@@ -111,9 +111,6 @@ body, html
 }
 
 .aboutDetails{
-  border-style: solid;
-  border-width: 1px;
-  border-color: darkgray;
   height: 300px;
   width: 80vw;
   margin: auto;
