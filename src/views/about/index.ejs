@@ -38,7 +38,7 @@
                    <a href="/about/new" class="btn btn-success">New Section Details</a>
                    <% } %>
                    <span class="editAboutlink">
-                   <a href="/about/<%= about.id %>/edit" class="btn btn-warning">Edit About Details</a>
+                   <a href="/about/<%= about.id %>/edit" class="btn btn-warning"><img height= "16px" width="16px" src="/images/edit-icon.png"> About Details</a>
                   </span>
                  <% } %>
                 <% } %>
@@ -59,16 +59,15 @@
               <div class="col-sm border servicesDetails">
                 <% about.forEach((about) => { %>
                   <% if(about.sectionType === 'services'){ %>
-                  <h1><%- about.title %></h1>
+                  <h2><%- about.title %></h2>
                     <%- about.description %>
                     <% if(currentUser) { %>
                        <span class="editServiceslink">
-                       <a href="/about/<%= about.id %>/edit" class="btn btn-warning">Edit Services Details</a>
+                       <a href="/about/<%= about.id %>/edit" class="btn btn-warning"><img height= "16px" width="16px" src="/images/edit-icon.png"> Services Details</a>
                       </span>
                      <% } %>
                   <% } %>
                 <% }) %>
-
               </div>
             </div>
           </div>
@@ -76,28 +75,32 @@
         <div class="apptSection container-fluid">
           <span id="apptTitle">
             Appointments
+            <span id="apptRectangle"></span>
           </span>
+
           <div class="row">
-            <div class="col-sm">
+            <div class="col-sm apptDetails">
               <% about.forEach((about) => { %>
                 <% if(about.sectionType === 'appointments'){ %>
-                <h1><%- about.title %></h1>
+                <h5><%- about.title %></h5>
                   <%- about.description %>
                   <% if(currentUser) { %>
-                     <span class="editApptlink">
-                     <a href="/about/<%= about.id %>/edit" class="btn btn-warning">Edit Appointment Details</a>
-                   </span>
+                     <div class="editApptlink">
+                     <a href="/about/<%= about.id %>/edit" class="btn btn-warning"><img height= "16px" width="16px" src="/images/edit-icon.png"> Appointment Details</a>
+                   </div>
                    <% } %>
+
                 <% } %>
               <% }) %>
 
             </div>
 
-            <div class="col-sm border">
+            <div class="col-sm border calendly">
               <!-- Calendly inline widget begin -->
               <div class="calendly-inline-widget" data-url="https://calendly.com/browsbychia" style="min-width:320px;height:580px;"></div>
               <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
               <!-- Calendly inline widget end -->
+
             </div>
             </div>
 
@@ -107,7 +110,9 @@
 
 
 
-<% include ../static/partials/baseScripts.ejs %>\<q cite=""></q>
+<% include ../static/partials/baseScripts.ejs %>
+
+
 
     </body>
 </html>
