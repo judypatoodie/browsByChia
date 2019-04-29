@@ -17,6 +17,7 @@ body, html
   overflow: hidden;
   min-width: 100vw;
   min-height: 100vh;
+
 }
 
 .landingbanner{
@@ -74,7 +75,35 @@ body, html
   z-index: 1;
 }
 
+#contactTitle{
+  font-family: valsdayscript;
+  font-size: 70px;
+  z-index: 1;
+  position: relative;
+}
 
+.contactSection{
+  text-align: center;
+  background-image: url('/images/pinkWatercolor.png');
+    background-position: center top;
+      background-size: cover;
+}
+
+#contactRectangle{
+  margin-top: -80px;
+  width:200px;
+  height:40px;
+  background:white;
+  opacity: 0.3;
+  z-index: 0;
+  position: absolute;
+}
+#contactContent{
+  display: inline-block;
+  text-align: left;
+  margin-top: -20px;
+  padding-bottom: 30px;
+}
 #aboutTitle{
   padding-left: 30px;
   font-family: valsdayscript;
