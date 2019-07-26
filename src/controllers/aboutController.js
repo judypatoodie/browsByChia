@@ -52,6 +52,7 @@ module.exports = {
       aboutQueries.updateAbout(req.params.id, req.body, (err, about) => {
 
         if(err || about == null){
+          console.log(err)
           res.redirect(404, `/about/${req.params.id}/edit`);
         } else {
           res.redirect(`/`);
