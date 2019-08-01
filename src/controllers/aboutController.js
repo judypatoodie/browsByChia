@@ -53,7 +53,7 @@ module.exports = {
 
         if(err || about == null){
           console.log(err)
-          res.redirect(404, `/about/${req.params.id}`);
+          res.redirect(404, `about/${req.params.id}`);
         } else {
           res.redirect(`/`);
         }
