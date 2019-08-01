@@ -24,7 +24,7 @@ module.exports = {
          if(err){
            res.redirect(500, "/");
          } else {
-           res.redirect(303, `/`);
+           res.redirect(303, "/");
          }
        });
      },
@@ -55,7 +55,7 @@ module.exports = {
           console.log(err)
           res.redirect(404, `about/${req.params.id}`);
         } else {
-          res.redirect(`/`);
+          res.redirect("/");
         }
       });
     }
